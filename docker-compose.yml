@@ -1,0 +1,8 @@
+app:
+  image: node:wheezy
+  command: npm --prefix ./worker start
+  ports:
+    - "8001:8001"
+  privileged: true
+  volumes:
+    - .:/worker

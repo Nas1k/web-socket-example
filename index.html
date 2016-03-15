@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Socket Example</title>
+</head>
+<body>
+    <script>
+        var ws = new WebSocket("ws://localhost:8001/echo");
+        ws.onopen = function (evt) {
+            document.getElementsByTagName('textarea')[0].value = evt.data;
+        };
+        ws.onmessage = function (evt) {
+            document.getElementsByTagName('textarea')[0].value = evt.data;
+        };
+        function send(str) {
+            ws.send(str);
+        }
+    </script>
+    <textarea oninput="ws.send(this.value);"></textarea>
+</body>
+</html>

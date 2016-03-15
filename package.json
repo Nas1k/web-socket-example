@@ -1,0 +1,10 @@
+{
+  "url": "https://github.com/Nas1k/web-socket-example",
+  "email": "andriy.nas@gmail.com",
+  "bin": {
+    "start": "node ./server.js"
+  },
+  "dependencies": {
+    "nodejs-websocket": "*"
+  }
+}
